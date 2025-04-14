@@ -1,30 +1,26 @@
 import React from 'react'
 import './About.css'
-import about_img from "../../assets/about.png"
-import play_icon from "../../assets/play-icon.png"
+import about_img from "../../assets/mine.jpeg"
 const About = () => {
   return (
     <div className='about'>
         <div className="about-left">
             <img src={about_img} alt="" className='about-img'/>
-            <img src={play_icon} alt="" className='play-icon'/>
         </div>
         <div className="about-right">
-            <h3>ABOUT UNIVERSITY</h3>
-            <h2>Nurturing Tomorrow's Leaders Today</h2>
+            <h3>ABOUT</h3>
+            <h2>Behind every smooth website is a savage dev.</h2>
 <p>
-  Embark on a transformative educational journey with our university's comprehensive education programs.
-  Our cutting-edge curriculum is designed to empower students with the knowledge, skills, and experiences needed
-  to excel in the dynamic field of education.
+I’m a first-year engineering student who’s passionate about web development and learning by doing. I started with the basics of HTML and CSS, and now I’m building full-stack apps using the MERN stack.
 </p>
 <p>
-  With a focus on innovation, hands-on learning, and personalized mentorship, our programs prepare aspiring
-  educators to make a meaningful impact in classrooms, schools, and communities.
+I believe in the power of clean code and user-friendly design. I’m always looking for new challenges and opportunities to grow my skills. Whether it’s a personal project or a collaborative effort, I’m all in.
 </p>
 <p>
-  Whether you aspire to become a teacher, administrator, counselor, or educational leader, our diverse range
-  of programs offers the perfect pathway to achieve your goals and unlock your full potential in shaping the
-  future of education.
+I actively take part in hackathons, build side projects, and keep exploring new tech to grow as a developer. I’m always looking for opportunities to learn, collaborate, and improve my skills.
+</p>
+<p>
+I’m excited about the future of web development and can’t wait to see where this journey takes me. If you’re looking for a passionate and dedicated developer to join your team or collaborate on a project, let’s connect!
 </p>
         </div>
     </div>

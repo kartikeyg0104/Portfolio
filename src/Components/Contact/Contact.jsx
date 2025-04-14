@@ -34,11 +34,10 @@ const Contact = () => {
     <div className='contact'>
         <div className="contact-col">
             <h3>Send Us a Message <img src={msg_icon} alt="" /></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui soluta similique consequatur saepe sed, ullam fugit aliquid, hic ipsam aliquam, iusto beatae natus ex modi. Totam accusantium et nihil obcaecati?</p>
             <ul>
-                <li><img src={mail_icon} alt="" />Contact@GreatStack.dev</li>
-                <li><img src={phone_icon} alt="" />+91 0000000000</li>
-                <li><img src={location_icon} alt="" />Tilak Nagar, New Delhi<br/>Delhi, India</li>
+                <li><img src={mail_icon} alt="" />kartikey.2024@nst.rishihood.edu.in</li>
+                <li><img src={phone_icon} alt="" />+91 7017111388</li>
+                <li><img src={location_icon} alt="" />Rishihood University, Sonipat<br/>Harayana, India</li>
             </ul>
         </div>
         <div className="contact-col">

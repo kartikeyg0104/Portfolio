@@ -12,6 +12,7 @@ nav{
 }
 .logo{
     width: 180px;
+    font-family: 'Poppins', sans-serif;
 }
 nav ul{
     margin: 0;
@@ -26,6 +27,129 @@ nav ul li{
 .dark-nav {
     background: #212EA0;
     transition: background 0.5s;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-image-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile-image-circle:hover {
+  transform: scale(1.1);
+}
+
+.profile-image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.zoomed-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transform: scale(0);
+  animation: zoomIn 0.5s ease forwards, pulse 2s infinite 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* You can also add a subtle pulse animation after the image loads */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* Add this rule to disable scrolling when overlay is active */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Add these rules for the underline effect */
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Special styling for active link (optional) */
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* For the contact button, we don't want the underline effect */
+nav ul li a.btn::after {
+  display: none;
 }
 
 /* Medium screens */

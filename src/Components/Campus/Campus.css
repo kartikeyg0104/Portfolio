@@ -7,11 +7,21 @@
 .gallery{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 27px;
     margin-bottom: 40px;
 }
 
 .gallery img{
-    width: 23%;
+    width: 33%;
+    height: auto;
     border-radius: 10px;
+    transition: all 0.3s ease; /* Add smooth transition */
+}
+
+/* Add hover effect */
+.gallery img:hover{
+    transform: scale(1.08); /* Enlarge image by 8% */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Add shadow on hover */
+    z-index: 1; /* Ensure hovered image appears above others */
 }
